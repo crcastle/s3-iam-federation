@@ -8,7 +8,7 @@ configure do
   config_file "config.yml"
 end
 
-#### List S3 objects in a specified bucket and prefix
+##### List S3 objects in a specified bucket and prefix
 get '/s3/?:bucket?/?:prefix?/?' do
   protected!
   return generate_form if params[:bucket].nil? and params[:prefix].nil?
@@ -37,6 +37,7 @@ helpers do
     "<input type='submit' value='List S3 Objects' onclick='document.location.href = &quot;/s3/&quot; + form.bucket.value + &quot;/&quot; + form.prefix.value; return false;'>" +
     "</form></p>"
   end
+  
   ##### Generate HTML UL of S3 objects
   def get_s3_objects(credentials, bucket_name, prefix)
     begin
