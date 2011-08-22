@@ -99,7 +99,7 @@ helpers do
   def authenticate(login, pass)
     return false if login.empty? or pass.empty?
     
-    if login == "chris.castle" and pass == "password"
+    if login == "test.user" and pass == "password"
       return true
     else
       return false
