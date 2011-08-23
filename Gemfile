@@ -1,6 +1,9 @@
 source "http://rubygems.org"
 
 gem "sinatra"
-gem "sinatra-reloader"
 gem "aws-sdk"
-gem "sinatra-config-file"
+gem "sinatra-config-file", :require => 'sinatra/config_file'
+
+group :development do
+  gem "sinatra-reloader", :requier => 'sinatra/reloader'
+end

@@ -1,7 +1,6 @@
-require 'sinatra'
-require 'sinatra/config_file'
-require 'sinatra/reloader' if development?
-require 'aws-sdk'
+require 'rubygems'
+require 'bundler/setup'
+Bundler.require(:default)
 require 'json'
 
 configure do
